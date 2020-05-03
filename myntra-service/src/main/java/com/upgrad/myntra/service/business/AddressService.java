@@ -24,7 +24,7 @@ public interface AddressService {
             SaveAddressException;
     AddressEntity getAddressByUUID(String addressId, CustomerEntity customerEntity) throws AuthorizationFailedException,
             AddressNotFoundException;
-    AddressEntity deleteAddress(AddressEntity addressEntity);
+    AddressEntity deleteAddress(AddressEntity addressEntity)throws AddressNotFoundException;
     List<AddressEntity> getAllAddress(CustomerEntity customer);
     StateEntity getStateByUUID(String uuid) throws AddressNotFoundException;
 }
