@@ -40,7 +40,7 @@ public class AddressController {
      * @throws //AddressNotFoundException
      */
     @PostMapping("/")
-    public ResponseEntity<SaveAddressResponse>saveAddress(SaveAddressRequest saveAddressRequest,@RequestHeader("authorization")final String authentication) throws Exception{
+    public ResponseEntity<SaveAddressResponse>saveAddress(@RequestBody SaveAddressRequest saveAddressRequest,@RequestHeader("authorization")final String authentication) throws Exception{
         CustomerEntity customerEntity = customerService.getCustomer(authentication);
 
         AddressEntity addressEntity = new AddressEntity();
