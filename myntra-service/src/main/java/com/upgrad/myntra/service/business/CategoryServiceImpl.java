@@ -19,7 +19,12 @@ public class CategoryServiceImpl implements CategoryService{
      * The method implements the business logic for getting category by its id endpoint.
      */
     @Override
-    public CategoryEntity getCategoryById(String categoryId) throws CategoryNotFoundException {
+    public CategoryEntity getCategoryById(String categoryId) throws CategoryNotFoundException{
+        if(categoryId.length()==0)
+            throw new CategoryNotFoundException("CNF-001","Category id field should not be empty");
+        if(categoryDao.getCategoryById(categoryId)==null)
+            throw new CategoryNotFoundException("CNF-002","No category by this id");
+        return categoryDao.getCategoryById(categoryId);
     }
 
     /**
@@ -27,6 +32,8 @@ public class CategoryServiceImpl implements CategoryService{
      */
     @Override
     public List<CategoryEntity> getAllCategoriesOrderedByName()  {
+        List<CategoryEntity> categoryEntityList = categoryDao.getAllCategoriesOrderedByName();
+        return categoryEntityList;
     }
 
     /**
@@ -34,5 +41,6 @@ public class CategoryServiceImpl implements CategoryService{
      */
     @Override
     public List<CategoryEntity> getCategoriesByBrand(String brandId)  {
+        return categoryDao.getCategoriesByBrand(brandId);
     }
 }
