@@ -79,9 +79,9 @@
 
                 <configuration>
                     <driver>${postgresql.driver.name}</driver>
-                    <url>jdbc:postgresql://${server.host}:${server.port}/${database.name}</url>
-                    <username>${database.username}</username>
-                    <password>${database.password}</password>
+                    <url>jdbc:postgresql://localhost:5432/myntradb</url>
+                    <username>postgres</username>
+                    <password>postgres</password>
                     <autocommit>true</autocommit>
                     <onError>abort</onError>
                 </configuration>

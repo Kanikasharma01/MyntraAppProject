@@ -20,6 +20,7 @@ import javax.persistence.PersistenceContext;
 public class CustomerDaoImpl implements CustomerDao {
 
     //When a container of the application(be it a Java EE container or any other custom container like Spring) manages the lifecycle of the Entity Manager, the Entity Manager is said to be Container Managed. The most common way of acquiring a Container Managed EntityManager is to use @PersistenceContext annotation on an EntityManager attribute.
+
     @PersistenceContext
     private EntityManager entityManager;
 
