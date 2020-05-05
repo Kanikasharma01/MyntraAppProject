@@ -20,7 +20,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "Brand details")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-05T18:32:51.090+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-04T17:17:15.014+05:30")
 
 public class BrandDetailsResponse   {
   @JsonProperty("id")
@@ -34,15 +34,6 @@ public class BrandDetailsResponse   {
 
   @JsonProperty("number_customers_rated")
   private Integer numberCustomersRated = null;
-
-  public BrandDetailsResponse(UUID id, String brandName, BigDecimal customerRating, Integer numberCustomersRated, BrandDetailsResponseAddress address, @Valid List<CategoryList> categories) {
-    this.id = id;
-    this.brandName = brandName;
-    this.customerRating = customerRating;
-    this.numberCustomersRated = numberCustomersRated;
-    this.address = address;
-    this.categories = categories;
-  }
 
   @JsonProperty("address")
   private BrandDetailsResponseAddress address = null;

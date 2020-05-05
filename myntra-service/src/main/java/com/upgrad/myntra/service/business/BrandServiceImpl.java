@@ -34,7 +34,7 @@ public class BrandServiceImpl implements BrandService {
      */
     @Override
     public List<BrandEntity> brandsByName(String brandName) throws BrandNotFoundException {
-        return null;
+        return brandDao.brandByName(brandName);
     }
 
     /**
@@ -43,7 +43,7 @@ public class BrandServiceImpl implements BrandService {
     @Override
 
     public List<BrandEntity> brandsByRating() {
-        return null;
+        return brandDao.brandByRating();
     }
 
     /**
@@ -51,7 +51,7 @@ public class BrandServiceImpl implements BrandService {
      */
     @Override
     public List<BrandEntity> brandByCategory(String categoryId) throws CategoryNotFoundException {
-        return null;
+        return brandDao.brandByCategory(categoryId);
     }
 
 }
